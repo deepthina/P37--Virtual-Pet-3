@@ -45,4 +45,24 @@ class Form {
 
 
     }
+
+    playing() {
+        bck.visible = true;
+        bck.y = 150;
+        bck.scale = 1.7;
+        bck.addImage("garden", gardenImage);
+    }
+
+    sleeping() {
+        bck.visible = true;
+        bck.scale = 2;
+        bck.addImage("bedroom", bedroomImage);
+    }
+
+    bathroom() {
+        bck.visible = true;
+        bck.y = 150;
+        bck.scale = 1.7;
+        bck.addImage("washroom", washroomImage);
+    }
 }

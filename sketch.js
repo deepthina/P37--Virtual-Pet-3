@@ -21,7 +21,7 @@ function preload() {
   gardenImage = loadImage("images/Garden.png");
   bedroomImage = loadImage("images/Bed Room.png");
   washroomImage = loadImage("images/Wash Room.png");
-}
+ }
 
 function setup() {
   createCanvas(800, 800);
@@ -75,29 +75,18 @@ function draw() {
 
 
   if (hour() === lastFed + 1) {
-    gameState = "playing";
-    writeGame(gameState);
-    bck.visible = true;
-    bck.y = 150;
-    bck.scale = 1.7;
-    bck.addImage("garden", gardenImage);
+    writeGame("playing");
+    form.playing();
   }
 
   if (hour() === lastFed + 2) {
-    gameState = "sleeping";
-    writeGame(gameState);
-    bck.visible = true;
-    bck.scale = 2;
-    bck.addImage("bedroom", bedroomImage);
+    writeGame("sleeping");
+    form.sleeping();
   }
 
   if (hour() > lastFed + 2 && (hour() < lastFed + 4)) {
-    gameState = "bathroom";
-    writeGame(gameState);
-    bck.visible = true;
-    bck.y = 150;
-    bck.scale = 1.7;
-    bck.addImage("washroom", washroomImage);
+    writeGame("bathroom");
+    form.bathroom();
   }
 
   else
